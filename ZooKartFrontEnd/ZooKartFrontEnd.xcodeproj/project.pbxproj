@@ -7,22 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55AA64102B81601400E9B999 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AA640F2B81601400E9B999 /* ProfileView.swift */; };
+		55AA64122B81604F00E9B999 /* RecentOrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AA64112B81604F00E9B999 /* RecentOrdersView.swift */; };
 		A829B1FC2B8114540096F684 /* ZooKartFrontEndApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A829B1FB2B8114540096F684 /* ZooKartFrontEndApp.swift */; };
 		A829B1FE2B8114540096F684 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A829B1FD2B8114540096F684 /* ContentView.swift */; };
 		A829B2002B8114550096F684 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A829B1FF2B8114550096F684 /* Assets.xcassets */; };
 		A829B2032B8114550096F684 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A829B2022B8114550096F684 /* Preview Assets.xcassets */; };
-		A829B20A2B8123CB0096F684 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A829B2092B8123CB0096F684 /* GoogleService-Info.plist */; };
 		A829B20D2B8129070096F684 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A829B20C2B8129070096F684 /* FirebaseAuth */; };
 		A8BD64272B81314A00887B14 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BD64262B81314A00887B14 /* WelcomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		55AA640F2B81601400E9B999 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		55AA64112B81604F00E9B999 /* RecentOrdersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentOrdersView.swift; sourceTree = "<group>"; };
 		A829B1F82B8114540096F684 /* ZooKartFrontEnd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZooKartFrontEnd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A829B1FB2B8114540096F684 /* ZooKartFrontEndApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooKartFrontEndApp.swift; sourceTree = "<group>"; };
 		A829B1FD2B8114540096F684 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A829B1FF2B8114550096F684 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A829B2022B8114550096F684 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		A829B2092B8123CB0096F684 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A8BD64262B81314A00887B14 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,7 +62,8 @@
 				A829B1FB2B8114540096F684 /* ZooKartFrontEndApp.swift */,
 				A8BD64262B81314A00887B14 /* WelcomeView.swift */,
 				A829B1FD2B8114540096F684 /* ContentView.swift */,
-				A829B2092B8123CB0096F684 /* GoogleService-Info.plist */,
+				55AA640F2B81601400E9B999 /* ProfileView.swift */,
+				55AA64112B81604F00E9B999 /* RecentOrdersView.swift */,
 				A829B1FF2B8114550096F684 /* Assets.xcassets */,
 				A829B2012B8114550096F684 /* Preview Content */,
 			);
@@ -141,7 +144,6 @@
 			files = (
 				A829B2032B8114550096F684 /* Preview Assets.xcassets in Resources */,
 				A829B2002B8114550096F684 /* Assets.xcassets in Resources */,
-				A829B20A2B8123CB0096F684 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +154,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55AA64122B81604F00E9B999 /* RecentOrdersView.swift in Sources */,
+				55AA64102B81601400E9B999 /* ProfileView.swift in Sources */,
 				A829B1FE2B8114540096F684 /* ContentView.swift in Sources */,
 				A8BD64272B81314A00887B14 /* WelcomeView.swift in Sources */,
 				A829B1FC2B8114540096F684 /* ZooKartFrontEndApp.swift in Sources */,
