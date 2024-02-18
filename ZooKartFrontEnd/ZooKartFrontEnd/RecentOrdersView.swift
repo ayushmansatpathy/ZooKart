@@ -11,11 +11,16 @@ struct RecentOrdersView: View {
                         Text(order)
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .background(Color.white) // Use a light background for the card
-                            .cornerRadius(10) // Rounded corners for the card look
+                            .background(Color(.sRGB, red: 128/255, green: 0, blue: 0, opacity: 1)) // Maroon background
+                            .foregroundColor(.white) // White text color
+                            .cornerRadius(10) // Rounded corners
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color(.sRGB, red: 128/255, green: 0, blue: 0, opacity: 1), lineWidth: 2) // Maroon border
+                            )
                             .shadow(radius: 5) // Shadow for a lifted card effect
+                            .padding(.horizontal) // Horizontal padding to the VStack for better alignment
                     }
-                    .padding(.horizontal) // Horizontal padding to the VStack for better alignment
                 }
             }
             .padding(.top) // Add some padding at the top of the VStack

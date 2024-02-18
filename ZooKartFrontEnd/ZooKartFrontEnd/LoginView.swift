@@ -1,4 +1,5 @@
 import SwiftUI
+
 struct LoginView: View {
     @State private var username: String = ""
     @State private var password: String = ""
@@ -30,16 +31,15 @@ struct LoginView: View {
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .padding(.horizontal, geometry.size.width * 0.05)
                         
-                        Button {
-                            // Handle login action
-                        } label: {
+                        Button(action: logInAction) {
                             Text("Log In")
                                 .foregroundColor(.white)
                                 .frame(minWidth: 0, maxWidth: .infinity)
                                 .padding()
-                                .background(Color(.sRGB, red: 128/255, green: 0, blue: 0, opacity: 1))
+                                .background(isFormValid ? Color(.sRGB, red: 128/255, green: 0, blue: 0, opacity: 1) : Color.gray)
                                 .cornerRadius(10)
                         }
+                        .disabled(!isFormValid)
                         .padding(.horizontal, geometry.size.width * 0.05)
                         .shadow(color: .gray, radius: 5, x: 0, y: 2) // Adds a shadow beneath the button
                     }
@@ -51,5 +51,14 @@ struct LoginView: View {
                 .edgesIgnoringSafeArea(.top)
             }
         }
+    }
+    
+    private var isFormValid: Bool {
+        !username.isEmpty && !password.isEmpty
+    }
+    
+    private func logInAction() {
+        // Handle login action here
+        print("Logging in...")
     }
 }
