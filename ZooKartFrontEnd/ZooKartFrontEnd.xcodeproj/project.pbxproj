@@ -40,6 +40,7 @@
 		7BE484522B816558001A6F13 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 7BE484512B816558001A6F13 /* FirebaseStorageCombine-Community */; };
 		7BF1905A2B8178B2001B73FB /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF190592B8178B2001B73FB /* SignUpView.swift */; };
 		7BF1905C2B818C24001B73FB /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF1905B2B818C24001B73FB /* AuthViewModel.swift */; };
+		7BF1905E2B818F46001B73FB /* Market.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF1905D2B818F46001B73FB /* Market.swift */; };
 		A829B1FC2B8114540096F684 /* ZooKartFrontEndApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A829B1FB2B8114540096F684 /* ZooKartFrontEndApp.swift */; };
 		A829B1FE2B8114540096F684 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A829B1FD2B8114540096F684 /* ContentView.swift */; };
 		A829B2002B8114550096F684 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A829B1FF2B8114550096F684 /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 		7BE4841A2B8164FC001A6F13 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7BF190592B8178B2001B73FB /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		7BF1905B2B818C24001B73FB /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		7BF1905D2B818F46001B73FB /* Market.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Market.swift; sourceTree = "<group>"; };
 		A829B1F82B8114540096F684 /* ZooKartFrontEnd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZooKartFrontEnd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A829B1FB2B8114540096F684 /* ZooKartFrontEndApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooKartFrontEndApp.swift; sourceTree = "<group>"; };
 		A829B1FD2B8114540096F684 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				A829B1FB2B8114540096F684 /* ZooKartFrontEndApp.swift */,
 				A8BD64262B81314A00887B14 /* WelcomeView.swift */,
 				7BF190592B8178B2001B73FB /* SignUpView.swift */,
+				7BF1905D2B818F46001B73FB /* Market.swift */,
 				A829B1FD2B8114540096F684 /* ContentView.swift */,
 				55AA640F2B81601400E9B999 /* ProfileView.swift */,
 				7BF1905B2B818C24001B73FB /* AuthViewModel.swift */,
@@ -261,6 +264,7 @@
 				A829B1FE2B8114540096F684 /* ContentView.swift in Sources */,
 				A8BD64272B81314A00887B14 /* WelcomeView.swift in Sources */,
 				A829B1FC2B8114540096F684 /* ZooKartFrontEndApp.swift in Sources */,
+				7BF1905E2B818F46001B73FB /* Market.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
