@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct ProfileView: View {
+
     var body: some View {
         GeometryReader { geometry in
             VStack {
@@ -9,7 +10,7 @@ struct ProfileView: View {
                 Text("ZooKart")
                     .font(.system(size: geometry.size.width * 0.1))
                     .padding(.top, geometry.size.height * 0.05)
-                
+//                Text(userId)
                 Image(systemName: "person.crop.circle.fill")
                     .resizable()
                     .aspectRatio(contentMode: .fill)

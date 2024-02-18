@@ -23,6 +23,7 @@ struct ZooKartFrontEndApp: App {
     var body: some Scene {
         WindowGroup {
             WelcomeView()
+                .environmentObject(AuthViewModel())
         }
     }
 }

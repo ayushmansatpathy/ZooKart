@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct WelcomeView: View {
+    @EnvironmentObject var authManager: AuthViewModel
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -87,5 +89,6 @@ struct DrawingConstants {
 struct WelcomeView_Previews: PreviewProvider {
     static var previews: some View {
         WelcomeView()
+            .environmentObject(AuthViewModel())
     }
 }

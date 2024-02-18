@@ -1,12 +1,14 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State private var username: String = ""
+    @State private var email: String = ""
     @State private var password: String = ""
+    
+    @EnvironmentObject var authManager: AuthViewModel
     
     var body: some View {
         GeometryReader { geometry in
-            NavigationView {
+            NavigationStack {
                 VStack {
                     Spacer(minLength: geometry.size.height * 0.1) // Adds space at the top
                     
@@ -23,23 +25,26 @@ struct LoginView: View {
                     
                     // Login form content
                     VStack(spacing: 20) {
-                        TextField("Username", text: $username)
+                        TextField("Email", text: $email)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .padding(.horizontal, geometry.size.width * 0.05)
+                            .autocapitalization(.none)
                         
                         SecureField("Password", text: $password)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .padding(.horizontal, geometry.size.width * 0.05)
+                            .autocapitalization(.none)
                         
                         Button(action: logInAction) {
+                        
                             Text("Log In")
                                 .foregroundColor(.white)
                                 .frame(minWidth: 0, maxWidth: .infinity)
                                 .padding()
-                                .background(isFormValid ? Color(.sRGB, red: 128/255, green: 0, blue: 0, opacity: 1) : Color.gray)
+                                .background(Color.maroon)
                                 .cornerRadius(10)
                         }
-                        .disabled(!isFormValid)
+//                        .disabled(!isFormValid)
                         .padding(.horizontal, geometry.size.width * 0.05)
                         .shadow(color: .gray, radius: 5, x: 0, y: 2) // Adds a shadow beneath the button
                     }
@@ -50,15 +55,37 @@ struct LoginView: View {
                 .background(Color.white)
                 .edgesIgnoringSafeArea(.top)
             }
+            .navigationDestination(isPresented: $authManager.validAuth) {
+                HomeView()
+            }
         }
+        
     }
     
-    private var isFormValid: Bool {
-        !username.isEmpty && !password.isEmpty
+    var isFormValid: Bool {
+        !email.isEmpty && !password.isEmpty
     }
     
     private func logInAction() {
         // Handle login action here
-        print("Logging in...")
+        print("LogIn Pressed")
+        guard isFormValid else {
+            print("Fill out the form completely")
+            return
+        }
+        Task {
+            await authManager.signIn(with: email, and: password)
+            guard authManager.validAuth else {
+                return
+            }
+            authManager.validAuth = true
+        }
     }
+    
 }
+
+//struct LoginView_Preview {
+//    static var previews: some View {
+//        LoginView(authManager: AuthViewModel())
+//    }
+//}
